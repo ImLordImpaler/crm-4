@@ -1,0 +1,36 @@
+{% extends 'basic/base.html' %}
+
+{% block content %}
+
+
+<div class='container-fluid py-4' style="background-color: grey;">
+<div class="clearfix container-fluid" >
+
+      
+
+    <div style="color: #4E73DF;" class='container ' > 
+   
+    <a class="btn btn-primary right mr-2 mt-1 " href="{% url 'calendarapp:calendar' %}?{{ next_month }} "> Next Month >> </a>
+        <a class="btn btn-primary right mr-2 mt-1" href="{% url 'calendarapp:calendar' %}?{{ prev_month }}"> << Previous Month </a>
+        <a class="btn btn-success right mr-2 mt-1" href="{% url 'calendarapp:event_new' %}"> + New Event </a>
+        <h1 class="h3 mb-0 " style="color:white;" >Your Appointments</h1>
+       
+            {{ calendar}}
+    </div>
+   
+
+   
+</div>
+</div>
+
+ 
+
+                
+
+
+
+
+
+{% include 'basic/calander/calanderStyle.html' %}
+ 
+{% endblock content %}

@@ -1,0 +1,228 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon.png' %}">
+  <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Salon Solutions
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- CSS Files -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <link href="{% static 'test.css' %}" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+ <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="orange"  style="">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo my-3">
+        
+      <center>  <a href="{% url 'dashboard' %}" class="simple-text logo-normal" style="font-size:19px;">
+          Salon
+        </a></center>
+      </div>
+      <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+          <li  class='navBtns'>
+            <a href="{% url 'dashboard' %}" class='navii'>
+              <i class="fas fa-tachometer-alt"></i>
+              
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li  class='navBtns'>
+            <a href="{% url 'enquiry' %}" class='navii'>
+              <i class="far fa-clipboard"></i>
+              <p>Enquiries</p>
+            </a>
+          </li>
+          <li class='navBtns '>
+            <a href="{% url 'serviceSlip' %}" class='navii '>
+              <i class="fas fa-file-invoice"></i>
+              <p>Billing</p>
+            </a>
+          </li>
+          <li class='navBtns'>
+            <a href="{% url 'stock' %}" class='navii'>
+              <i class="fas  fa-boxes"></i>
+              <p>Inventory</p>
+            </a>
+          </li>
+          <li class='navBtns'>
+            <a href="{% url 'employee' %}" class='navii'>
+              <i class="fas fa-male"></i>
+              <p>Beautiticans</p>
+            </a>
+          </li>
+          <li class='navBtns'>
+            <a href="{% url 'reports' %}" class='navii'>
+              <i class="fas fa-chart-area"></i>
+              <p>Report</p>
+            </a>
+          </li>
+
+          <li class='navBtns mb-3'>
+          <div class="btn-group">
+          
+            <button type="button" class="btn btn-primary btn-round dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <i class="fas fa-file-invoice"></i> Manage
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'product' %}">New Product</a>
+              <a class="dropdown-item" href="{% url 'service' %}">New Service</a>
+              <a class="dropdown-item" href="#"></a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+          </div>
+          </li>
+
+          <li class="active-pro mt-5 "  >
+            <a href="./upgrade.html" style="margin-top: 8rem;">
+              <i class="fa fa-satellite-dish b arrows-1_cloud-download-93"></i>
+              <p>Upgrade to PRO</p>
+            </a>
+          </li>
+         
+         
+        </ul>
+      </div>
+    </div>
+    <style>
+    .navBtns:hover{
+      font-size:21px;
+    }
+    </style>
+    <div class="main-panel" id="main-panel" >
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent    bg-primary  navbar-absolute" >
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler" >
+                <span class="navbar-toggler-bar bar1" style="color:black;"></span>
+                <span class="navbar-toggler-bar bar2" style="color:black;"></span>
+                <span class="navbar-toggler-bar bar3" style="color:black;"></span>
+              </button>
+            </div>
+            </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab " style="color:black;"></span>
+            <span class="navbar-toggler-bar navbar-kebab " style="color:black;"></span>
+            <span class="navbar-toggler-bar navbar-kebab " style="color:black;"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    
+                </li>
+              <li class="nav-item dropdown pt-3">
+                <a class="nav-link dropdown-toggle" style="color: black; " id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-user-circle fa-3x" style="color: black; "></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Some Actions</span>
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Profile</a>
+                  <a class="dropdown-item" href="#">Settings</a>
+                  <a class="dropdown-item" href="#">Logout?</a>
+                </div>
+              </li>
+                     
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+     
+      <div class="container-fluid ">
+     <strong><p id="clock" > </p></strong>
+        <div class='row ' style='border-bottom:1px solid black;'>
+          <div class='col-sm-6 ' >
+           
+            </div>
+            <div class='col-sm-6 d-flex flex-row-reverse justify-content-around '>
+               <h2 class='pr-5' style="font-family: 'Dancing Script', cursive;"><i>Makes Salon Easy! </i> </u><h2>
+           
+            </div>
+            
+          
+        </div>
+      </div>
+        <div style="background-color: grey;" >
+        {% block content%}
+        {% endblock content%}
+  </div>
+
+
+     
+
+
+    </div>
+  </div>
+  <script>
+  {% block script %}
+  {% endblock script %}
+  </script>
+  <!--   Core JS Files   -->
+  <script src="{% static 'js/core/jquery.min.js'%}"></script>
+  <script src="{% static 'js/core/popper.min.js'%}"></script>
+  <script src="{% static 'js/core/bootstrap.min.js'%}"></script>
+  <script src="{% static 'js/plugins/perfect-scrollbar.jquery.min.js'%}"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="{% static 'js/plugins/chartjs.min.js'%}"></script>
+  <!--  Notifications Plugin    -->
+  <script src="{% static 'js/plugins/bootstrap-notify.js'%}"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="{% static 'js/now-ui-dashboard.min.js'%}" type="text/javascript"></script><!-- Now Ui Dashboard DEMO methods, don't include it in your project! -->
+  <script src="{% static 'demo/demo.js'%}"></script>
+  
+</body>
+
+<script>
+      function clock() {
+      let date = new Date();
+      let hrs = date.getHours();
+      let mins = date.getMinutes();
+      let secs = date.getSeconds();
+      let period = "AM";
+    
+      if (hrs == 0) hrs = 12;
+      if (hrs > 12) {
+        hrs = hrs - 12;
+        period = "PM";
+      }
+    
+      hrs = hrs < 10 ? `0${hrs}` : hrs;
+      mins = mins < 10 ? `0${mins}` : mins;
+      secs = secs < 10 ? `0${secs}` : secs;
+    
+      let time = `${hrs}:${mins}:${secs} ${period}`;
+      setInterval(clock, 1000);
+      document.getElementById("clock").innerText = time;
+    }
+    
+    clock();
+
+  </script>
+</html>

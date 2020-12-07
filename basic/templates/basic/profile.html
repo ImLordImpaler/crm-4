@@ -1,0 +1,49 @@
+{% extends 'basic/base.html' %}
+{% load static %}
+{% block content %}
+<div class='container'>
+
+    <div class='row '>
+        <div class='col-sm-5'>
+            <div class="card card-user">
+              <div class="image">
+                <img src="https://images.pexels.com/photos/1319460/pexels-photo-1319460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="...">
+              </div>
+              <div class="card-body">
+                <div class="author">
+                  <a href="#">
+                    <img class="avatar border-gray" src="{% static 'sample1.jpg' %}" alt="...">
+                    <h5 class="title">{{request.user}}</h5>
+                  </a>
+                  <p class="description">
+                    {{request.user.email}}
+                  </p>
+                </div>
+                <p class="description text-center">
+                <!--
+                    Desciption here
+                    
+                -->
+                Phone no:
+                Email: 
+                Address:
+                </p>
+              </div>
+              <hr>
+              <div class="button-container">
+                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                  <i class="fab fa-google-plus-g"></i>
+                </button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock content %}

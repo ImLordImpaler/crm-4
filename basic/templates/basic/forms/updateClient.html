@@ -1,0 +1,55 @@
+{% extends 'basic/base.html' %}
+
+
+{% block content %}
+   
+
+
+        <div class='row'>
+            <div class='col-sm-8'>
+                <div class="card">
+              <div class="card-header">
+                <h5 class="title">Update Client</h5>
+              </div>
+              <div class="card-body">
+                <form action="{% url 'product' %}" method='POST'>
+                  <div class="row">
+                    <div class="col-md-5 pr-1">
+                      <div class="form-group">
+                        <label>Name:</label>
+                        {% render_field form.name class="form-control" placeholder="Enter your name" %} 
+                      </div>
+                    </div>
+                    <div class="col-md-3 px-1">
+                      <div class="form-group">
+                        <label>Phone</label>
+                        
+                          {% render_field form.phone class="form-control" placeholder="Enter Your Phone Number" %} 
+                        </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Service</label>
+                        {% render_field form.email class="form-control" id='exampleFormControlSelect1' %} 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group">
+                        <label>Response</label>
+                        {% render_field form.address class="form-control" placeholder="Customer Response" %}
+                      </div>
+                    </div>
+                   
+                  </div>
+                  
+                  
+                <button type='submit' value='submit' class='btn btn-primary btn-round'>Submit </button>
+                </form>
+              </div>
+            </div>
+            </div>
+        </div>
+    {% endblock content %}
+ 

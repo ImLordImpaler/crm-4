@@ -1,0 +1,35 @@
+{% extends 'basic/base.html' %}
+
+{% block content %}
+
+
+<div class='row'>
+    <div class='col-sm-6'>
+    Enquiry Types
+<canvas id="myChart" ></canvas>
+    </div>
+</div>
+
+
+{% endblock content %}
+{% block script %}
+      var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'pie',
+
+            // The data for our dataset
+            data: {
+                labels: ['Warm' , 'Cold' , 'Normal'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: ['{{warm}}' , '{{cold}}' ,'{{normal}}']
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+{% endblock script %}

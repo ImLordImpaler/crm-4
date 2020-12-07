@@ -1,0 +1,43 @@
+<div class="table-responsive">
+                  <table class="table my-2">
+                    <thead class=" text-primary ">
+                      <th>
+                        Link
+                      </th>
+                      <th>
+                        Name
+                      </th>
+                      <th>
+                        Phone
+                      </th>
+                      <th>
+                        Date
+                      </th>
+                      <th >
+                        Response
+                      </th>
+                    </thead>
+                    <tbody class='mt-2'>
+                    {% for i in enq %}
+                      <tr class='py-2'>
+                       <td>
+                          <a href="{% url 'enquiry' %}" class="badge badge-info">Click me</a>
+                        </td>
+                        <td>
+                          {{i.name}}
+                        </td>
+                        <td>
+                          {{i.phone}}
+                        </td>
+                        <td>
+                          {{i.date}}
+                        </td>
+                        <td >
+                          {{i.responseType}}
+                        </td>
+                      </tr>
+                   {% endfor %}
+                    </tbody>
+                  </table>
+                  <a href="" class='btn btn-outline-primary mt-4'>All Products </a>
+                </div>

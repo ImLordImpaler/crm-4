@@ -1,0 +1,44 @@
+<div class="table-responsive">
+                  <table class="table my-2 border-bottom">
+                    <thead class=" text-primary ">
+                      <th>
+                        Action
+                      </th>
+                      <th>
+                        Name
+                      </th>
+                      <th>
+                        Price
+                      </th>
+                      <th>
+                        Sell Price
+                      </th>
+                      <th >
+                        Quantity
+                      </th>
+                    </thead>
+                    <tbody class='mt-2'>
+                    {% for i in pro %}
+                      <tr class='py-2'>
+                       <td>
+                          <a href="{% url 'productEnquiry' i.id %}" class="badge badge-info">Update</a>
+                        </td>
+                        <td>
+                          {{i.name}}
+                        </td>
+                        <td>
+                          {{i.bprice}}
+                        </td>
+                        <td>
+                          {{i.sprice}}
+                        </td>
+                        <td >
+                          {{i.quantity}}
+                        </td>
+                      </tr>
+                   {% endfor %}
+                    </tbody>
+                  </table>
+                  
+                  <a href="" class='btn btn-outline-primary mt-4'>All Products </a>
+                </div>
