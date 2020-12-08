@@ -73,7 +73,7 @@ def loginPage(request):
     else :
         pass
 
-    return render(request , 'basic/login.html')
+    return render(request , 'basic/signin.html')
 
 def register(request):
     form = SignUpForm()
